@@ -1,0 +1,52 @@
+* {
+    font-family: montserrat;
+  }
+  
+/*test*/
+
+  body{
+    background:   #fff;
+  }
+  
+  h1 {
+    font-family: montserrat;
+    color: #0066ff;
+    text-align: center;
+    font-size: 70px;
+  }
+  
+  input#input::placeholder{
+    color: #fff;
+  }
+  
+  input#input{
+    position: absolute;
+    left: 250px;
+    top: 250px;
+    font-size: 30px;
+    width: 300px;
+    text-align: center;
+    background-color: #0066ff;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    border: 3px solid  #0066ff;
+    outline: none;
+    display: inline-block;
+  }
+  
+  input#submit {
+    cursor: pointer;
+    padding: 2px 6px 2px 6px;
+    position: absolute;
+    top: 258px;
+    left: 500px;
+    font-size: 20px;
+    background-color:  #0066ff;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    border: 3px solid #fff;
+    outline: none;
+    display: inline-block;
+  }
