@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Rein.ga</title>
-    <link rel="icon" href=# type=image/x-icon>
+    <link rel="icon" href="./favicon.ico" type=image/x-icon>
     <link href=style.css rel=stylesheet type=text/css>
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto|Anton|Roboto+Mono" rel="stylesheet">
   </head>
