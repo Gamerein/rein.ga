@@ -17,8 +17,9 @@
 
     <?php
       if (isset($_GET['id'])){
-        $conn = new mysqli('127.0.0.1', "root", "", "DB");
-        $sql = "SELECT * FROM links WHERE id = '$_GET[id]'";
+        include 'MySQL.php';
+        $conn = new mysqli("$sqlHost", "$sqlUsername", "$sqlPassword", "$sqlDatabase");
+        $sql = "SELECT * FROM $sqlLinkTable WHERE id = '$_GET[id]'";
         $result = $conn->query($sql);
 
         if($result->num_rows != 0) {

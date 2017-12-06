@@ -2,11 +2,12 @@
         $link = $_GET["url"];
       
         if (filter_var($link, FILTER_VALIDATE_URL)) {
-        $conn = new mysqli('127.0.0.1', "root", "", "DB");          
-
+        include 'MySQL.php';
+        $conn = new mysqli("$sqlHost", "$sqlUsername", "$sqlPassword", "$sqlDatabase");
+        
         $id = createID();
 
-        $sql = "INSERT INTO links (id, url)
+        $sql = "INSERT INTO $sqlLinkTable (id, url)
         VALUES ('$id', '$link')";
 
         if ($conn->query($sql) === TRUE) {
@@ -18,7 +19,7 @@
         }else{
             echo "That's not a valid url! Example: https://www.google.com";
         }
-        
+
         function createID() {
             $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
             $charactersLength = strlen($characters);
