@@ -1,4 +1,5 @@
 <?php    
+        error_reporting(0);
         $link = $_GET["url"];
       
         if (filter_var($link, FILTER_VALIDATE_URL)) {

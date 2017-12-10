@@ -3,5 +3,5 @@
     $sqlUsername = "root";
     $sqlPassword = "";
     $sqlDatabase = "DB";
-    $sqlLinkTable = "links"
+    $sqlLinkTable = "links";
 ?>
