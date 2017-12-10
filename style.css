@@ -2,6 +2,11 @@
     font-family: montserrat;
   }
   
+  /*Remove 000webhost mark*/
+  a[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."] {
+    visibility: hidden;
+}
+  
   body{
     background:   #fff;
   }
