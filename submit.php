@@ -11,7 +11,7 @@
         VALUES ('$id', '$link')";
 
         if ($conn->query($sql) === TRUE) {
-            echo "Link succesfully created! rein.ga/index.php?id=" . $id;
+            echo "Link succesfully created! rein.ga/rdr.php?id=" . $id;
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }

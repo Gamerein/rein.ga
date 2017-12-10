@@ -14,24 +14,6 @@
       <input id="input" type="text" name="url" placeholder="Link here">
       <input id="submit" type="submit" value="Shorten">
     </form>
-
-    <?php
-      if (isset($_GET['id'])){
-        include 'MySQL.php';
-        $conn = new mysqli("$sqlHost", "$sqlUsername", "$sqlPassword", "$sqlDatabase");
-        $sql = "SELECT * FROM $sqlLinkTable WHERE id = '$_GET[id]'";
-        $result = $conn->query($sql);
-
-        if($result->num_rows != 0) {
-          while($row = $result->fetch_assoc()) {
-            echo "<h1 #id=\"redirecting\">redirecting...</h1>";
-            header("Location: $row[url]");
-            die();
-        }  
-        }
-      }
-    ?>
-
   </body>
 
 </html>
