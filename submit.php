@@ -12,13 +12,14 @@
         VALUES ('$id', '$link')";
 
         if ($conn->query($sql) === TRUE) {
-            echo "Link succesfully created! rein.ga/rdr.php?id=" . $id;
+            echo "Link succesfully created! <a style=\"text-decoration:underline;color:blue;cursor:pointer; href=\"rein.ga?id=$id\">rein.ga?id=$id</a>";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
         
         }else{
-            echo "That's not a valid url! Example: https://www.google.com";
+            echo "That's not a valid url! Example: https://www.google.com  ";
+            echo "<a style=\"text-decoration:underline;color:blue;cursor:pointer;\"onclick=\"window.location = '/';\">back</a>";
         }
 
         function createID() {
