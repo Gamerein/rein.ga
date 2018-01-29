@@ -12,7 +12,7 @@
         VALUES ('$id', '$link')";
 
         if ($conn->query($sql) === TRUE) {
-            echo "Link succesfully created! <a style=\"text-decoration:underline;color:blue;cursor:pointer; href=\"rein.ga?id=$id\">rein.ga?id=$id</a>";
+            echo "Link succesfully created! <a style=\"text-decoration:underline;color:blue;cursor:pointer;\" href=\"http://rein.ga?id=$id\">http://rein.ga?id=$id</a>";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
