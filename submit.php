@@ -12,7 +12,11 @@
         VALUES ('$id', '$link')";
 
         if ($conn->query($sql) === TRUE) {
+            if (isset($_GET['sharex'])){ #If the sharex parameter is used, the output won't have context.
+                echo "http://rein.ga?id=$id";
+            } else {
             echo "Link succesfully created! <a style=\"text-decoration:underline;color:blue;cursor:pointer;\" href=\"http://rein.ga?id=$id\">http://rein.ga?id=$id</a>";
+            }
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
