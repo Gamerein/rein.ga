@@ -12,7 +12,7 @@
         VALUES ('$id', '$link')";
 
         if ($conn->query($sql) === TRUE) {
-            if (isset($_GET['sharex'])){ #If the sharex parameter is used, the output won't have context.
+            if (isset($_GET['no-context'])){ #If the sharex parameter is used, the output won't have context.
                 echo "http://rein.ga?id=$id";
             } else {
             echo "Link succesfully created! <a style=\"text-decoration:underline;color:blue;cursor:pointer;\" href=\"http://rein.ga?id=$id\">http://rein.ga?id=$id</a>";
@@ -21,7 +21,10 @@
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
         
-        }else{
+        }elseif ((isset($_GET['no-context']))){
+            echo "invalid URL";
+        } else {
+            
             echo "That's not a valid url! Example: https://www.google.com  ";
             echo "<a style=\"text-decoration:underline;color:blue;cursor:pointer;\"onclick=\"window.location = '/';\">back</a>";
         }
